@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lista de Casamento | Isaque & Kathleen</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--bg:#f5f5f4;
+--card:#ffffff;
+--muted:#78716c;
+--border:#e7e5e4;
+}
+*{box-sizing:border-box;font-family:Inter}
+body{margin:0;background:var(--bg);color:#1c1917}
+.container{max-width:1100px;margin:auto;padding:32px}
+header{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:36px;text-align:center}
+h1{margin:0;font-size:32px}
+.subtitle{margin-top:12px;color:var(--muted)}
+.section{margin-top:48px}
+.section h2{margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;display:flex;flex-direction:column}
+.card img{height:170px;object-fit:contain;margin-bottom:14px}
+.price{font-weight:800;margin-top:6px}
+.btn{margin-top:auto;text-align:center;padding:12px;border-radius:12px;background:#1c1917;color:#fff;text-decoration:none;font-weight:700}
+.vale{background:var(--card);border:2px dashed #a8a29e;border-radius:16px;padding:32px;text-align:center}
+footer{text-align:center;margin-top:60px;color:var(--muted);font-size:14px}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+<header>
+<h1>Lista de Presentes de Casamento</h1>
+<p class="subtitle">
+Isaque Araújo Lima dos Santos & Kathleen Barrense de Oliveira<br>
+Com carinho, compartilhamos alguns presentes que farão parte da nossa nova história
+</p>
+</header>
+
+<div class="section">
+<div class="grid">
+
+<script>
+const produtos = [
+  {
+    nome: "Forno Elétrico de Embutir Electrolux Multifuncional 80L Preto Experience OE8EA",
+    preco: "R$ 1899,00",
+    imagem: "https://m.magazineluiza.com.br/a-static/420x420/forno-eletrico-de-embutir-electrolux-multifuncional-80l-preto-experience-oe8ea/magazineluiza/240161000/448f88e07aeddff091c3b0f24c262747.jpg",
+    link: "https://m.magazineluiza.com.br/forno-eletrico-de-embutir-electrolux-multifuncional-80l-preto-experience-oe8ea/p/240161000/ed/frne/?partner_id=64853&utm_source=pdp_desk&utm_medium=share"
+  },
+  {
+    nome: "Cooktop 5 Bocas CD075BE a Gás Mesa de Vidro Temperado Consul",
+    preco: "R$ 716,92 ",
+    imagem: "https://m.magazineluiza.com.br/a-static/420x420/cooktop-5-bocas-cd075be-a-gas-mesa-de-vidro-temperado-consul/lojascolombooficial/1589934/00cd78cf086f4b803829812c1775a4d9.jpeg",
+    link: "https://m.magazineluiza.com.br/cooktop-5-bocas-cd075be-a-gas-mesa-de-vidro-temperado-consul/p/kaj5djd0e4/ed/ck4b/?partner_id=64853&utm_source=pdp_desk&utm_medium=share"
+  },
+  {
+    nome: "Lava & Seca 11 Kg Samsung SmartThings Inox Look com 12 Programas de Lavagem - WD11T504DBX",
+    preco: "R$ 4261,70 ",
+    imagem: "https://m.magazineluiza.com.br/a-static/420x420/lava-seca-11-kg-samsung-smartthings-inox-look-com-12-programas-de-lavagem-wd11t504dbx/fastshop2/sgwd11ti1/0d34fd43b8f031c934810c9f57e444b8.jpeg",
+    link: "https://m.magazineluiza.com.br/lava-seca-11-kg-samsung-smartthings-inox-look-com-12-programas-de-lavagem-wd11t504dbx/p/jk8h46b107/ed/ela1/?partner_id=64853&utm_source=pdp_desk&utm_medium=share"
+  },
+  {
+    nome: "Chaleira Elétrica Electrolux 1,7L Experience com Desligamento Automático (EEK25)",
+    preco: "R$ 170,91",
+    imagem: "https://m.magazineluiza.com.br/a-static/420x420/chaleira-eletrica-electrolux-17l-experience-com-desligamento-automatico-eek25/electrolux/310118791/8f11fd172964344a2c8789b1dff680a1.jpeg",
+    link: "https://m.magazineluiza.com.br/chaleira-eletrica-electrolux-17l-experience-com-desligamento-automatico-eek25/p/fedd8gd46f/ep/clre/?partner_id=64853&utm_source=pdp_desk&utm_medium=share"
+  },
+  {
+    nome: "Cesto de roupa suja Lifewit 100L grande de altura com alças bege",
+    preco: "R$ 303,05",
+    imagem: "https://m.magazineluiza.com.br/a-static/420x420/cesto-de-roupa-suja-lifewit-100l-grande-de-altura-com-alcas-bege/nocnocestadosunidos/buybox-cpb0dk4wwc8b/acd67c1e8575c2a2daac52c7fd147d48.jpeg",
+    link: "https://m.magazineluiza.com.br/cesto-de-roupa-suja-lifewit-100l-grande-de-altura-com-alcas-bege/p/ebjajc87d7/ud/cesr/?partner_id=64853&utm_source=pdp_desk&utm_medium=share"
+  }
+];
+
+document.write(produtos.map(p => `
+  <div class="card">
+    <img src="${p.imagem}" alt="${p.nome}">
+    <strong>${p.nome}</strong>
+    <div class="price">${p.preco}</div>
+    <a class="btn" target="_blank" href="${p.link}">
+      Ver produto
+    </a>
+  </div>
+`).join(""));
+
+
+function copiarTexto() {
+  const texto = document.getElementById("textoPix").innerText;
+
+  navigator.clipboard.writeText(texto).then(() => {
+    alert("Texto copiado com sucesso!");
+  }).catch(() => {
+    alert("Erro ao copiar o texto");
+  });
+}
+
+
+
+</script>
+
+</div>
+</div>
+
+<div class="section">
+<h2>Vale Presente em Dinheiro</h2>
+<div class="vale">
+<h3>Valor Livre</h3>
+<p>Você pode contribuir com o valor que desejar</p>
+<img src="assets/qr_code_200x200.png" alt="QR Code PIX">
+
+<p>
+  <strong>PIX:</strong>
+  <span id="textoPix" style="display: none;">8acecbfb-e1ed-4ad5-bda2-bf5ac31c0098</span>
+</p>
+
+<button class="btn" onclick="copiarTexto()">
+Clique aqui para copiar o PIX
+</button>
+
+
+<p style="color:#78716c;font-size:14px">
+Agradecemos por fazer parte desse momento especial
+</p>
+</div>
+</div>
+
+<footer>
+Com carinho, Isaque & Kathleen
+</footer>
+
+</div>
+</body>
+</html>
